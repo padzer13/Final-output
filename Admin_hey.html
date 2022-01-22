@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Mode</title>
+</head>
+<body>
+    
+    
+    
+   
+
+    <div class= "wrapper">
+
+        <div class= "registration_form">
+
+            <div class="title">
+                Dino Eats Product List
+            </div>
+
+            <div class="input_wrap">
+                <button type="button" id="viewtable" onclick="viewTable()">Product List</button>
+            </div>
+
+            <div class="input_wrap">
+                <button type="button" id="Home" onclick="login()">Home</button>
+            </div>
+
+            <div class="form_wrap">
+
+                
+               
+        
+                <div class="input_wrap" id="viewT"></div>
+            </div>
+        
+           </div>
+
+
+    </div>
+ 
+   
+
+  <script >
+
+function login(){
+
+
+window.alert("Developed by: Hanz Christian P. Jimenez");
+location.href = "Login_hey.html";
+}
+
+
+      function viewTable(Products){
+
+var Products = [
+    {
+        "ProductID": 1,
+        "ProductName": "Suns Burger",
+        "Category": "Sandwhich",
+        "Price": 60.00
+    },
+    {
+        "ProductID": 2,
+        "ProductName": "Milo MilkShake",
+        "Category": "Drink",
+        "Price": 120.00
+    },
+    {
+        "ProductID": 3,
+        "ProductName": "Creamy Carbonara",
+        "Category": "Pasta",
+        "Price": 75.00
+    },
+    {
+        "ProductID": 4,
+        "ProductName": "Crispy Pata",
+        "Category": "Meat",
+        "Price": 170.00
+    },
+    {
+        "ProductID": 5,
+        "ProductName": "Whiped Cream Bread",
+        "Category": "Bread",
+        "Price": 25.00
+    },
+    {
+        "ProductID": 6,
+        "ProductName": "Buko Juice",
+        "Category": "Drink",
+        "Price": 13.00
+    },
+    {
+        "ProductID": 7,
+        "ProductName": "Grilled Tuna Colar",
+        "Category": "Sea Food",
+        "Price": 128.00
+    },
+    {
+        "ProductID": 8,
+        "ProductName": "Deviled Egg",
+        "Category": "Appetizer",
+        "Price": 17.00
+    },
+    {
+        "ProductID": 9,
+        "ProductName": "Cofee Cake Crumble",
+        "Category": "Dessert",
+        "Price":128.00
+    },
+    {
+        "ProductID": 10,
+        "ProductName": "Salted Egg Crab",
+        "Category": "Sea Food",
+        "Price": 220.00
+    }
+] 
+
+    var mainContainer = document.getElementById("viewT");
+    for (var i = 0; i < Products.length; i++) {
+      var div = document.createElement("div");
+      div.innerHTML = 'Product ' + Products[i].ProductID + ' | ' + Products[i].ProductName + ' | ' + Products[i].Price;
+      mainContainer.appendChild(div);
+    }
+  
+}
+  </script>
+<style>
+     
+   
+    body{
+        
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(103, 255, 166);
+        background-image:url('dino_eats_bg2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .wrapper{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.registration_form{
+	background: #bdfddd;
+    border: 5px solid #555555;
+	padding: 25px;
+	border-radius: 5px;
+	width: 600px;
+}
+.registration_form .title{
+    font-family: Arial, sans-serif;
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #ff1302;
+	letter-spacing: 5px;
+	font-weight: 700;
+    margin: 35px;
+}
+
+.registration_form .input_wrap{
+	margin: 10px;
+}
+.form_wrap{
+	margin: 35px;
+}
+
+
+.form_wrap .input_wrap{
+    font-family: Arial, sans-serif;
+	font-size: 18px;
+	
+	color: #ff4141;
+	letter-spacing: 5px;
+	font-weight: 700;
+	width: 100%;
+	
+	border: 2px solid #f82a2a;
+	padding: 10px;
+	outline: none;
+}
+    
+#viewtable{
+   
+	width: 100%;
+	background: #ff665c;
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+#viewtable:hover{
+	background: #ffd5d2;
+}   
+
+#Home{
+    position: absolute;
+            left: 75%;
+            top: 75%;
+	width: 15%;
+	background: #ff665c;
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+}
+
+#Home:hover{
+	background: #ffd5d2;
+}   
+     
+      
+    </style>
+  
+</body>
+</html>
